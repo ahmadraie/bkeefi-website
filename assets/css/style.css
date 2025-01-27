@@ -1,0 +1,436 @@
+@font-face {
+    font-family: 'kharabeesh_fontnormal';
+    src: url('font/kharabeesh-font-webfont.woff2') format('woff2'),
+         url('font/kharabeesh-font-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* General Reset */
+body {
+    margin-top: 70px;
+    font-family: 'kharabeesh_fontnormal', sans-serif;
+    background-color: black;
+}
+
+/* Hero Section */
+.hero-section {
+   
+    height: 100vh;
+    font-family: 'Changa', sans-serif;
+
+}
+
+.hero-section p {
+    font-size: 24px;
+}
+.hero-section .btn {
+    background-color:white;
+}
+.hero-section h1 {
+  font-size: 95px;
+}
+.hero-section h1 span {
+  color: #ff0000;
+}
+
+@media (max-width :768px) {
+    .hero-section h1 {
+        font-size: 50px;
+    }
+}
+
+
+/* Navbar */
+.navbar-brand {
+    font-weight: bold;
+    color: #007bff;
+    font-family: 'kharabeesh_fontnormal', sans-serif;
+}
+
+.nav-link {
+    color: #fff;
+    margin: 0 10px;
+    font-family: 'Changa', sans-serif;
+    font-size: 20px;
+}
+
+.nav-link:hover {
+    color: #ff0000;
+}
+
+/* Section Styles */
+section {
+    padding: 60px 0;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.5)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+section h2 {
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-family: 'kharabeesh_fontnormal', sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 95px;
+}
+
+section h5 {
+
+    font-family: 'Changa', sans-serif;
+}
+
+section p {
+    font-size: 1.1rem;
+    font-family: 'Changa', sans-serif;
+    color: #fff;
+
+}
+
+#about h2 span {
+  color: #ff0000;
+}
+#about p {
+  text-align: justify;
+}
+
+#vision {
+    background-color: #ffffff00;
+    border: solid 3px #ffffff ;
+    border-radius: 8px;
+    width: 595px;
+    height: 206px; 
+    text-align: center;
+    padding: 10px;
+    margin:5px;
+    align-self: center;
+    
+}
+
+@media (max-width:768px) {
+    #vision {
+        height: fit-content;
+        width: fit-content;
+    }
+}
+#vision h3 {
+    color: #ff0000;
+    font-size: 42px;
+}
+#vision p {
+    color: #ffffff;
+}
+
+.marketing-section  {
+     /* transform:skew(0deg, 8deg); */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    position: relative;
+    padding: 4rem 1rem;
+    color: #000000;
+    background-color: #fff;
+    height: 500px;
+    z-index: 1;
+    overflow: hidden;
+    text-align: center;
+
+
+  }
+
+  .marketing-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.032); /* Overlay color */
+    z-index: -1;
+  }
+
+  .marketing-content h2 span {
+
+    color: #000000;
+  }
+  .marketing-content h2 {
+     color: #fff;
+     z-index: 2;
+
+    }
+    .marketing-section img {
+        /* transform:skew(0deg, -8deg); */
+        z-index: 2;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+
+    }
+  .marketing-content {
+    transform:skew(0deg, -8deg);
+    /* background: rgba(0, 0, 0, 0.6); Semi-transparent background for text */
+    border-radius: 10px;
+    padding: 20px;
+    z-index: 2;
+
+  }
+  @media (max-width: 768px) {
+    .marketing-section img {
+      max-width: 100%;
+      position: relative;
+
+    }
+    .marketing-section  {
+        height: auto;
+    }
+  }
+#app-video video {
+    border: #ffffff 2px solid ;
+    
+}
+#app-video h2 span { 
+    color:#ff0000;
+}
+
+/* General Styling */
+.video-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  /* Poster Container Styling */
+  .poster-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 0.5rem;
+    cursor: pointer;
+  }
+  
+  /* Poster Image Styling */
+  .poster-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5rem;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: #fff 3px solid;
+  }
+  
+  /* Play Button Styling */
+  .play-button {
+    z-index: 3;
+    position: relative;
+    font-size: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    background-color: #ff0000;
+    border: #fff;
+    color: #fff;
+  }
+  .play-button:hover {
+background-color: #fff;
+color: #ff0000;
+  }
+  
+  /* Video Player Styling */
+  .video-player {
+    width: 100%;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+#features {
+    background-repeat: no-repeat;
+}
+#features h2 {
+  color: #ff0000;
+}
+#features h5 {
+  color:#ff0000;
+  font-size: 26px;
+}
+
+.marketing-section-02  {
+    margin-top: 50px;
+    transform:skew(0deg, -8deg);
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   padding: 0 0 0 0;
+   color: #000000;
+   background-color: #fff;
+   height: 500px;
+ }
+
+ .marketing-content-02 h2 span {
+
+   color: #ff0000;
+ }
+ .marketing-content-02 h2 {
+    color: #fff;
+   }
+   .marketing-section-02 img {
+       transform:skew(0deg, 8deg);
+
+   }
+ .marketing-content-02 {
+   transform:skew(0deg, 8deg);
+   /* background: rgba(0, 0, 0, 0.6); Semi-transparent background for text */
+   border-radius: 10px;
+   padding: 20px;
+ }
+ @media (max-width: 768px) {
+   .marketing-section-02 img {
+     max-width: 100%;
+   }
+   .marketing-section-02  {
+       height: auto;
+   }
+ }
+
+#leagues h2 span {
+    color: #ff0000;
+}
+
+.swiper {
+    width: 100%;
+    max-width: 1000px;
+  }
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    max-width: 300px;
+  }
+  .swiper-slide img {
+    width: 230px;
+    height: auto;
+    object-fit: contain;
+  }
+
+  @media (max-width:768px) {
+    .swiper-slide img {
+        width: 115px;
+       
+      }
+  }
+
+
+  .saudi-vision-section {
+    padding: 50px 20px;
+    background-color: #000000; /* Light gray background for contrast */
+  }
+  .saudi-vision-content h2 {
+    color: #fff; /* Custom blue for the title */
+    font-weight: bold;
+  }
+  .saudi-vision-content h2 span {
+
+    color:#ff0000;
+  }
+  .saudi-vision-content p {
+    line-height: 1.8;
+    color: #ffffff;
+    text-align: justify;
+  }
+  .saudi-vision-image img {
+    border-radius: 10px;
+  }
+  @media (max-width: 768px) {
+    .saudi-vision-image img {
+      max-width: 100%;
+    }
+  }
+
+  
+.marketing-section-03  {
+  margin-top: 50px;
+  /* transform:skew(0deg, -8deg); */
+ background-size: cover;
+ background-position: center;
+ background-repeat: no-repeat;
+ padding: 0 0 0 0;
+ color: #000000;
+ background-color: #fff;
+ height: 500px;
+}
+
+.marketing-content-03 h2 span {
+
+ color: #000000;
+}
+.marketing-content-03 h2 {
+  color: #fff;
+ }
+ .marketing-section-03 img {
+     transform:skew(0deg, 8deg);
+
+ }
+.marketing-content-03 {
+ /* transform:skew(0deg, 8deg); */
+ /* background: rgba(0, 0, 0, 0.6); Semi-transparent background for text */
+ border-radius: 10px;
+ padding: 20px;
+}
+@media (max-width: 768px) {
+ .marketing-section-03 img {
+   max-width: 100%;
+ }
+ .marketing-section-03  {
+     height: auto;
+ }
+}
+
+/* strategic */
+
+#strategic h2 span {
+  color: #ff0000;
+}
+
+/* contact */
+
+#contact h2 span {
+  color: #ff0000;
+}
+
+/* Footer */
+footer {
+    background-color: #fff;
+    font-family: 'Changa', sans-serif;
+    color: #ff0000;
+    font-size: 18px;
+}
+
+footer a {
+color:black;
+font-size: 26px;
+text-decoration: none;
+}
+footer a:hover {
+    color: #ff0000;
+}
+footer i {
+    font-size: 26px;
+}
+footer i:hover {
+    color: #ff0000;
+}
+
