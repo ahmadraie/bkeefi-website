@@ -381,6 +381,7 @@ color: #ff0000;
 }
 .marketing-content-03 h2 {
   color: #fff;
+  
  }
  .marketing-section-03 img {
      transform:skew(0deg, 8deg);
@@ -398,6 +399,9 @@ color: #ff0000;
  }
  .marketing-section-03  {
      height: auto;
+ }
+ .marketing-content-03 h2 {
+  font-size: 50px;
  }
 }
 
