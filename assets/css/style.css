@@ -405,6 +405,47 @@ color: #ff0000;
  }
 }
 
+#subscription-plans {
+  background-color: #000000;
+}
+
+#subscription-plans h2 span {
+color: #ff0000;
+}
+
+#subscription-plans .card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ff0000;
+}
+
+#subscription-plans h4 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+#subscription-plans ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+#subscription-plans ul li {
+  margin: 0.5rem 0;
+}
+
+#subscription-plans .btn {
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  background-color: #ff0000;
+  color: #fff;
+}
+
+#subscription-plans .btn:hover {
+  
+  background-color: #fff;
+  color: #ff0000;
+}
+
 /* strategic */
 
 #strategic h2 span {
