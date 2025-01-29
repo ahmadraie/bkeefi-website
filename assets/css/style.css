@@ -133,13 +133,19 @@ section p {
     padding: 4rem 1rem;
     color: #000000;
     background-color: #fff;
-    height: 500px;
+    height: 650px;
     z-index: 1;
     overflow: hidden;
     text-align: center;
 
 
   }
+
+  .mark {
+    margin-top: 25px;
+    background-color: transparent;
+  }
+  
 
   .marketing-section::before {
     content: '';
@@ -159,7 +165,6 @@ section p {
   .marketing-content h2 {
      color: #fff;
      z-index: 2;
-
     }
     .marketing-section img {
         /* transform:skew(0deg, -8deg); */
@@ -267,6 +272,21 @@ color: #ff0000;
   font-size: 26px;
 }
 
+.saudi-vision-section .btn {
+  color:#fff;
+  background-color: #ff0000;
+  width: 150px;
+  height: auto;
+  font-size: 24px;
+  margin-top: 20px;
+
+}
+
+.saudi-vision-section .btn:hover {
+  color:#ff0000;
+  background-color: #fff;
+}
+
 .marketing-section-02  {
     margin-top: 50px;
     transform:skew(0deg, -8deg);
@@ -307,6 +327,13 @@ color: #ff0000;
 
 #leagues h2 span {
     color: #ff0000;
+}
+
+@media (max-width:768px) {
+
+  #leagues h2{
+  font-size: 50px;
+  }
 }
 
 .swiper {
@@ -431,6 +458,7 @@ color: #ff0000;
 
 #subscription-plans ul li {
   margin: 0.5rem 0;
+  text-align: left;
 }
 
 #subscription-plans .btn {
@@ -479,5 +507,10 @@ footer i {
 }
 footer i:hover {
     color: #ff0000;
+}
+
+footer .mobile-app {
+
+  color: #007bff;
 }
 
