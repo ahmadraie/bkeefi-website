@@ -59,6 +59,22 @@ body {
 .nav-link:hover {
     color: #ff0000;
 }
+.nav-item.btn {
+  color: #fff;
+  background-color: #ff0000;
+  border: #fff 2px solid;
+}
+
+.nav-link.btn {
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.nav-item.btn:hover {
+  color: #ff0000;
+  background-color: #fff;
+  border: #ff0000 2px solid;
+}
 
 /* Section Styles */
 section {
