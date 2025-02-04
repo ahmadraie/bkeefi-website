@@ -262,22 +262,72 @@
            experience these famous venues like never before. It’s the perfect way to connect with your
             favorite teams and stadiums, all from the comfort of your home.
         </p>
-        <a href="#" class="btn " data-bs-toggle="modal" data-bs-target="#tourModal">Take a Tour</a>
+        <a href="#" class="btn " data-bs-toggle="modal" data-bs-target="#imageGridModal">Take a Tour</a>
 
-        <!-- Modal -->
-<div class="modal fade" id="tourModal" tabindex="-1" aria-labelledby="tourModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="tourModalLabel">Vortigate 3D Config</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+        <!-- Image Grid Popup -->
+    <div class="modal fade" id="imageGridModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title">Choose a Stadium</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body">
+                  <div class="container">
+                      <div class="row g-3 image-grid">
+                          <!-- 15 Images -->
+                          <script>
+                              let stadiums = [
+                                  { id: 1, name: "Stadium 1", src: "assets/img/stadiums/Stadium01.jpg", tour: "https://www.vortigate.com/vortigate-3d-config" },
+                                  { id: 2, name: "Stadium 2", src: "assets/img/stadiums/Stadium01.jpg", tour: "https://www.vortigate.com/vortigate-3d-config" },
+                                  { id: 3, name: "Stadium 3", src: "assets/img/stadiums/Stadium01.jpg", tour: "https://www.vortigate.com/vortigate-3d-config" },
+                                  { id: 4, name: "Stadium 4", src: "assets/img/stadiums/Stadium01.jpg", tour: "https://www.vortigate.com/vortigate-3d-config" },
+                                  { id: 5, name: "Stadium 5", src: "assets/img/stadiums/Stadium01.jpg", tour: "https://www.vortigate.com/vortigate-3d-config" },
+                                  { id: 6, name: "Stadium 6", src: "assets/img/stadiums/Stadium01.jpg", tour: "https://www.vortigate.com/vortigate-3d-config" },
+                                  { id: 7, name: "Stadium 7", src: "assets/img/stadiums/Stadium01.jpg", tour: "https://www.vortigate.com/vortigate-3d-config" },
+                                  { id: 8, name: "Stadium 8", src: "assets/img/stadiums/Stadium01.jpg", tour: "https://www.vortigate.com/vortigate-3d-config" },
+                                  { id: 9, name: "Stadium 9", src: "assets/img/stadiums/Stadium01.jpg", tour: "https://www.vortigate.com/vortigate-3d-config" },
+                                  { id: 10, name: "Stadium 10", src: "assets/img/stadiums/Stadium01.jpg", tour: "https://www.vortigate.com/vortigate-3d-config" },
+                                  { id: 11, name: "Stadium 11", src: "assets/img/stadiums/Stadium01.jpg", tour: "https://www.vortigate.com/vortigate-3d-config" },
+                                  { id: 12, name: "Stadium 12", src: "assets/img/stadiums/Stadium01.jpg", tour: "https://www.vortigate.com/vortigate-3d-config" },
+                                  { id: 13, name: "Stadium 13", src: "assets/img/stadiums/Stadium01.jpg", tour: "https://www.vortigate.com/vortigate-3d-config" },
+                                  { id: 14, name: "Stadium 14", src: "assets/img/stadiums/Stadium01.jpg", tour: "https://www.vortigate.com/vortigate-3d-config" },
+                                  { id: 15, name: "Stadium 15", src: "assets/img/stadiums/Stadium01.jpg", tour: "https://www.vortigate.com/vortigate-3d-config" },
+                              ];
+                              
+                              let gridContainer = document.querySelector(".image-grid");
+                              stadiums.forEach(stadium => {
+                                  let colDiv = document.createElement("div");
+                                  colDiv.classList.add("col-4");
+                                  colDiv.innerHTML = `<img src="${stadium.src}" alt="${stadium.name}" data-tour="${stadium.tour}" onclick="openTour('${stadium.tour}')">`;
+                                  gridContainer.appendChild(colDiv);
+                              });
+                          </script>
+                      </div>
+                  </div>
+              </div>
+          </div>
       </div>
-      <div class="modal-body">
-        <iframe src="https://www.vortigate.com/vortigate-3d-config" width="100%" height="700px" style="border: none;"></iframe>
-      </div>
-    </div>
   </div>
-</div>
+
+  <!-- Virtual Tour Popup -->
+  <div class="modal fade" id="virtualTourModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-xl">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title">Virtual Tour</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body">
+                  <iframe id="tourFrame" src="" width="100%" height="500px" style="border: none;"></iframe>
+              </div>
+          </div>
+      </div>
+  </div>
+
+
+
 
       </div>
     </div>
@@ -593,6 +643,13 @@
     });
   });
 </script>
+
+<script>
+      function openTour(url) {
+          document.getElementById("tourFrame").src = url;
+          new bootstrap.Modal(document.getElementById("virtualTourModal")).show();
+      }
+  </script>
 </body>
 
 </html>
