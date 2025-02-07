@@ -461,67 +461,141 @@
       <p>Pick a subscription plan that fits your needs and enjoy the ultimate VR sports experience.</p>
     </div>
 
-    <!-- Buy a Ticket -->
-    <div class="row align-items-center mb-5" data-aos="fade-up">
-      <div class="col-md-6">
-        <h3 class="card-title">Buy a Ticket</h3>
-        <p>Choose a standard or premium ticket and enjoy an immersive VR sports experience.</p>
-        <ul class="list-unstyled">
-          <li><i class="bi bi-check"></i> Enjoy the selected match.</li>
-          <li><i class="bi bi-check"></i> Immersive 360° view of the action.</li>
-          <li><i class="bi bi-check"></i> Customize your view with different angles.</li>
-          <li><i class="bi bi-check"></i> Get personalized notifications for your favorite events.</li>
-          <li><i class="bi bi-check"></i> Chat and interact with friends in exclusive rooms.</li>
-        </ul>
-        <a href="#" class="btn btn-primary">Buy Now</a>
+    <div class="row justify-content-center" data-aos="fade-up">
+      <!-- Buy a Ticket -->
+      <div class="col-md-4 mb-4">
+        <div class="card shadow h-100 text-center">
+          <div class="card-body text-center d-flex flex-column align-items-center">
+            <img src="assets/img/Ticket-icon.png" alt="Collaboration Icon" class="img-fluid icon" >
+            <h3 class="fw-bold">One Ticket</h3>
+            <p>Choose a standard or premium ticket for</p>
+            <img src="assets/img/buyone.png" alt="Buy a Ticket" class="custom-img cursor-pointer" data-bs-toggle="modal" data-bs-target="#ticketModal">
+          </div>
+        </div>
       </div>
-      <div class="col-md-6 text-center">
-        <img src="assets/img/SaudiVision02.png" alt="Buy a Ticket" class="img-fluid rounded">
+
+      <!-- Bkeefi Standard -->
+      <div class="col-md-4 mb-4">
+        <div class="card shadow h-100 text-center">
+          <div class="card-body text-center d-flex flex-column align-items-center">
+            <img src="assets/img/standerd-icon.png" alt="Collaboration Icon" class="img-fluid icon" >
+            <h3 class="fw-bold">Bkeefi Standard</h3>
+            <h4 class="text-primary">57.99 SR/month</h4>
+            <img src="assets/img/Subscribe.png" alt="Bkeefi Standard" class="custom-img  " data-bs-toggle="modal" data-bs-target="#standardModal">
+          </div>
+        </div>
+      </div>
+
+      <!-- Bkeefi Premium -->
+      <div class="col-md-4 mb-4">
+        <div class="card shadow h-100 text-center">
+          <div class="card-body text-center d-flex flex-column align-items-center">
+            <img src="assets/img/premium-icon.png" alt="Collaboration Icon" class="img-fluid icon" >
+
+            <h3 class="fw-bold">Bkeefi Premium</h3>
+            <h4 class="text-primary">99.99 SR/month</h4>
+            <img src="assets/img/Subscribe.png" alt="Bkeefi Premium" class="custom-img " data-bs-toggle="modal" data-bs-target="#premiumModal">
+          </div>
+        </div>
       </div>
     </div>
-
-    <!-- Bkeefi Standard -->
-    <div class="row align-items-center flex-md-row-reverse mb-5" data-aos="fade-up">
-      <div class="col-md-6">
-        <h3 class=" card-title">Bkeefi Standard</h3>
-        <h4 class="text-primary">57.99 SR/month</h4>
-        <ul class="list-unstyled">
-          <li><i class="bi bi-check"></i> Unlock multi-sport coverage.</li>
-          <li><i class="bi bi-check"></i> Experience every angle with a 360° view.</li>
-          <li><i class="bi bi-check"></i> Tailor your view with customizable angles.</li>
-          <li><i class="bi bi-check"></i> Stay updated with personalized event notifications.</li>
-          <li><i class="bi bi-check"></i> Enjoy seamless access across multiple platforms.</li>
-          <li><i class="bi bi-check"></i> Connect with friends in dedicated interactive rooms.</li>
-          <li><i class="bi bi-check"></i> Take virtual tours of your favorite stadiums.</li>
-        </ul>
-        <a href="#" class="btn btn-primary">Subscribe Now</a>
-      </div>
-      <div class="col-md-6 text-center">
-        <img src="assets/img/virt-tour.jpg" alt="Bkeefi Standard" class="img-fluid rounded">
-      </div>
-    </div>
-
-    <!-- Bkeefi Premium -->
-    <div class="row align-items-center mb-5" data-aos="fade-up">
-      <div class="col-md-6">
-        <h3 class="card-title">Bkeefi Premium</h3>
-        <h4 class="text-primary">99.99 SR/month</h4>
-        <ul class="list-unstyled">
-          <li><i class="bi bi-check"></i> All features from Bkeefi Standard, plus exclusive upgrades.</li>
-          <li><i class="bi bi-check"></i> Re-watch matches anytime.</li>
-          <li><i class="bi bi-check"></i> Dive into behind-the-scenes action.</li>
-          <li><i class="bi bi-check"></i> Track every move with real-time match statistics.</li>
-          <li><i class="bi bi-check"></i> Control your viewing experience by pausing the live stream.</li>
-        </ul>
-        <a href="#" class="btn btn-primary">Subscribe Now</a>
-      </div>
-      <div class="col-md-6 text-center">
-        <img src="assets/img/virt-tour.jpg" alt="Bkeefi Premium" class="img-fluid rounded">
-      </div>
-    </div>
-
   </div>
 </section>
+
+<!-- Buy a Ticket Modal -->
+<div class="modal fade" id="ticketModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Buy a Ticket</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <div class="text-center mb-3">
+          <p>Choose between a Standard or Premium Ticket for an exclusive VR experience.</p>
+        </div>
+
+        <!-- Standard Ticket -->
+        <div class="border rounded p-3 mb-3">
+          <h5 class="fw-bold text-primary">Standard Ticket</h5>
+          <ul class="list-unstyled">
+            <li><i class="bi bi-check"></i> Watch the selected match in VR.</li>
+            <li><i class="bi bi-check"></i> Enjoy a high-quality 360° view.</li>
+            <li><i class="bi bi-check"></i> Interact with live chat and reactions.</li>
+          </ul>
+          <div class="text-center">
+            <a href="#" class="btn btn-primary">Buy Standard Ticket</a>
+          </div>
+        </div>
+
+        <!-- Premium Ticket -->
+        <div class="border rounded p-3">
+          <h5 class="fw-bold text-danger">Premium Ticket</h5>
+          <ul class="list-unstyled">
+            <li><i class="bi bi-check"></i> All Standard Ticket features.</li>
+            <li><i class="bi bi-check"></i> Multiple camera angles selection.</li>
+            <li><i class="bi bi-check"></i> Exclusive behind-the-scenes access.</li>
+            <li><i class="bi bi-check"></i> Real-time match analytics.</li>
+          </ul>
+          <div class="text-center">
+            <a href="#" class="btn btn-danger">Buy Premium Ticket</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Standard Modal -->
+<div class="modal fade" id="standardModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Bkeefi Standard - 57.99 SR/month</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body text-left d-flex flex-column align-items-center">
+        <img src="assets/video/realtime.gif" alt="Immersive VR Experience" class="img-fluid mb-3" >
+        <ul class="list-unstyled">
+          <li><i class="bi bi-check"></i> Unlock multi-sport coverage.</li>
+          <li><i class="bi bi-check"></i> Experience every angle in 360°.</li>
+          <li><i class="bi bi-check"></i> Tailor your view with customizable angles.</li>
+          <li><i class="bi bi-check"></i> Stay updated with event notifications.</li>
+          <li><i class="bi bi-check"></i> Enjoy seamless multi-platform access.</li>
+          <li><i class="bi bi-check"></i> Connect in interactive rooms.</li>
+          <li><i class="bi bi-check"></i> Virtual tours of stadiums.</li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <a href="#" class="btn btn-primary">Subscribe Now</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Premium Modal -->
+<div class="modal fade" id="premiumModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Bkeefi Premium - 99.99 SR/month</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body text-left d-flex flex-column align-items-center">
+        <ul class="list-unstyled">
+          <li><i class="bi bi-check"></i> All features from Standard, plus upgrades.</li>
+          <li><i class="bi bi-check"></i> Re-watch matches anytime.</li>
+          <li><i class="bi bi-check"></i> Behind-the-scenes action.</li>
+          <li><i class="bi bi-check"></i> Real-time match statistics.</li>
+          <li><i class="bi bi-check"></i> Pause live streams anytime.</li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <a href="#" class="btn btn-primary">Subscribe Now</a>
+      </div>
+    </div>
+  </div>
+</div>
 
 <section id="contact">
   <div class="container">
