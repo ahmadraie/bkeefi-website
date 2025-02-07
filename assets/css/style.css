@@ -449,28 +449,38 @@ color: #ff0000;
 }
 
 #subscription-plans {
-  background-color: #000000;
+  background-color: #ffffff;
 }
 
 #subscription-plans .card{
-  height: 250px;
+  height: fit-content;
   padding-top: 30px;
   border-top: solid #ff0000 50px;
 
 }
 
 
+#subscription-plans h2 {
+  color: #000000;
+}
 
+#subscription-plans p {
+  color: #000000;
+}
 #subscription-plans h2 span {
 color: #ff0000;
 }
 
 #subscription-plans .card-title {
-  font-size: 1.5rem;
+  font-size: 3rem;
   font-weight: 700;
   color: #ff0000;
 }
 
+#subscription-plan h3 {
+  color: #ff0000;
+
+}
 #subscription-plans h4 {
   font-size: 1.25rem;
   margin-bottom: 1rem;
