@@ -484,6 +484,7 @@ color: #ff0000;
 #subscription-plans h4 {
   font-size: 1.25rem;
   margin-bottom: 1rem;
+  color: #ff0000;
 }
 
 #subscription-plans ul {
@@ -496,15 +497,14 @@ color: #ff0000;
   text-align: left;
 }
 
-/* #subscription-plans .btn {
+ .modal-body .btn {
   font-weight: 600;
   padding: 0.75rem 1.5rem;
   background-color: #ff0000;
   color: #fff;
 height: 50px;
 width: 200px;
-  border-radius: 40%;
-} */
+}
 
 .cursor-pointer {
   cursor: pointer;
@@ -524,7 +524,7 @@ width: 200px;
   color: #fff;
 }
 
-#subscription-plans .btn:hover {
+.modal-body .btn:hover {
   
   background-color: #fff;
   color: #ff0000;
@@ -532,9 +532,20 @@ width: 200px;
 
 #subscription-plans  .icon{
   display: flex;
-height: 100px;
-width: 100px;
+height: 80px;
+width: 80px;
 
+
+}
+.card-body .bkeefitext {
+padding-left: 20px;
+padding-right: 20px;
+  width:125px;
+  height: auto;
+}
+.card-body .custom-img { 
+  width: 300px;
+  height: auto;
 
 }
 
