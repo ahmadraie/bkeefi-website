@@ -568,7 +568,7 @@ padding-right: 20px;
 #ticketModal .modal-content {
 position: absolute;
 top: 25vh;
-left: -8vw;
+left: -10vw;
   width: 1000px;
   height: auto;
 }
