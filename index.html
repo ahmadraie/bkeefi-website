@@ -479,7 +479,7 @@
         <div class="card shadow h-80 text-center">
           <div class="card-body text-center d-flex flex-column align-items-center">
             <img src="assets/img/standerd-icon.png" alt="Collaboration Icon" class="img-fluid icon" >
-            <h3 class="fw-bold"><span style="color: #ff0000;">Standard</span> </h3>
+            <h3 class="fw-bold"><span style="color: #ff0000;">STANDARD</span> </h3>
             <h4 class=""><span  style="color: #000000;">57.99 SR</span>/month</h4>
             <img src="assets/img/Subscribe.png" alt="Bkeefi Standard" class="custom-img  " data-bs-toggle="modal" data-bs-target="#standardModal">
           </div>
@@ -492,11 +492,14 @@
           <div class="card-body text-center d-flex flex-column align-items-center">
             <img src="assets/img/premium-icon.png" alt="Collaboration Icon" class="img-fluid icon" >
 
-            <h3 class="fw-bold"> <span style="color: #ff0000;">Premium</span> </h3>
+            <h3 class="fw-bold"> <span style="color: #ff0000;">PREMIUM</span> </h3>
             <h4 class=""><span  style="color: #000000;">99.99 SR</span>/month</h4>
             <img src="assets/img/Subscribe.png" alt="Bkeefi Premium" class="custom-img " data-bs-toggle="modal" data-bs-target="#premiumModal">
           </div>
         </div>
+      </div>
+      <div class="col-12 text-center  comp">
+            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#comparisonModal"> Compare Plans </button>
       </div>
     </div>
   </div>
@@ -617,6 +620,93 @@
       </div>
       <div class="modal-footer">
         <a href="#" class="btn ">Subscribe Now</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="comparisonModal" tabindex="-1" aria-labelledby="comparisonModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="comparisonModalLabel">Compare bkeefi Plans</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <table class="table table-bordered text-center">
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>bkeefi <span style="color: #ff0000;">STANDARD</span></th>
+              <th>bkeefi <span style="color: #ff0000;">PREMIUM</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Multi-sport coverage</td>
+              <td><i class="bi bi-check-circle text-success"></i></td>
+              <td><i class="bi bi-check-circle text-success"></i></td>
+            </tr>
+            <tr>
+              <td>Immersive 360° view</td>
+              <td><i class="bi bi-x-circle text-success"></i></td>
+              <td><i class="bi bi-check-circle text-success"></i></td>
+            </tr>
+            <tr>
+              <td>Customizable viewing angles</td>
+              <td><i class="bi bi-x-circle text-success"></i></td>
+              <td><i class="bi bi-check-circle text-success"></i></td>
+            </tr>
+            <tr>
+              <td>Personalized notifications</td>
+              <td><i class="bi bi-x-circle text-success"></i></td>
+              <td><i class="bi bi-check-circle text-success"></i></td>
+            </tr>
+            <tr>
+              <td> Multiple platform compatibility</td>
+              <td><i class="bi bi-check-circle text-success"></i></td>
+              <td><i class="bi bi-check-circle text-success"></i></td>
+            </tr>
+            <tr>
+              <td>Interactions with friends</td>
+              <td><i class="bi bi-x-circle text-success"></i></td>
+              <td><i class="bi bi-check-circle text-success"></i></td>
+            </tr>
+            <tr>
+              <td>Virtual tours of stadiums</td>
+              <td><i class="bi bi-x-circle text-danger"></i></td>
+              <td><i class="bi bi-check-circle text-success"></i></td>
+            </tr>
+            <tr>
+              <td>Re-watch any match</td>
+              <td><i class="bi bi-x-circle text-danger"></i></td>
+              <td><i class="bi bi-check-circle text-success"></i></td>
+            </tr>
+            <tr>
+              <td>Behind the scene content</td>
+              <td><i class="bi bi-x-circle text-danger"></i></td>
+              <td><i class="bi bi-check-circle text-success"></i></td>
+            </tr>
+            <tr>
+              <td>Real-time match statistics</td>
+              <td><i class="bi bi-x-circle text-danger"></i></td>
+              <td><i class="bi bi-check-circle text-success"></i></td>
+            </tr>
+            <tr>
+              <td>Pause the action anytime</td>
+              <td><i class="bi bi-x-circle text-danger"></i></td>
+              <td><i class="bi bi-check-circle text-success"></i></td>
+            </tr>
+            <tr>
+              <td>Price</td>
+              <td><i class="">57.99 SR</i></td>
+              <td><i class=""></i>99.99 SR</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
       </div>
     </div>
   </div>
