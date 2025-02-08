@@ -256,7 +256,6 @@
   </div>
 </section>
 
-<!-- virtual tour Section -->
 <section class="saudi-vision-section" >
   <div class="container">
     <div class="row align-items-center">
@@ -274,14 +273,6 @@
             favorite teams and stadiums, all from the comfort of your home.
         </p>
         <a href="#" class="btn " data-bs-toggle="modal" data-bs-target="#imageSwiperModal">Take a Tour</a>
-
-
-
-
-
-  
-
-
 
       </div>
     </div>
@@ -835,67 +826,77 @@
 </script>
 
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-      let stadiums = [
-          { id: 1, name: "Stadium 1", src: "assets/img/stadiums/Stadium01.jpg", tour: "https://www.vortigate.com/vortigate-3d-config" },
-          { id: 2, name: "Stadium 2", src: "assets/img/stadiums/Stadium01.jpg", tour: "https://www.vortigate.com/vortigate-3d-config" },
-          { id: 3, name: "Stadium 3", src: "assets/img/stadiums/Stadium01.jpg", tour: "https://www.vortigate.com/vortigate-3d-config" },
-          { id: 4, name: "Stadium 4", src: "assets/img/stadiums/Stadium01.jpg", tour: "https://www.vortigate.com/vortigate-3d-config" },
-          { id: 5, name: "Stadium 5", src: "assets/img/stadiums/Stadium01.jpg", tour: "https://www.vortigate.com/vortigate-3d-config" },
-          { id: 6, name: "Stadium 6", src: "assets/img/stadiums/Stadium01.jpg", tour: "https://www.vortigate.com/vortigate-3d-config" },
-          { id: 7, name: "Stadium 7", src: "assets/img/stadiums/Stadium01.jpg", tour: "https://www.vortigate.com/vortigate-3d-config" },
-          { id: 8, name: "Stadium 8", src: "assets/img/stadiums/Stadium01.jpg", tour: "https://www.vortigate.com/vortigate-3d-config" },
-          { id: 9, name: "Stadium 9", src: "assets/img/stadiums/Stadium01.jpg", tour: "https://www.vortigate.com/vortigate-3d-config" },
-          { id: 10, name: "Stadium 10", src: "assets/img/stadiums/Stadium01.jpg", tour: "https://www.vortigate.com/vortigate-3d-config" },
-          { id: 11, name: "Stadium 11", src: "assets/img/stadiums/Stadium01.jpg", tour: "https://www.vortigate.com/vortigate-3d-config" },
-          { id: 12, name: "Stadium 12", src: "assets/img/stadiums/Stadium01.jpg", tour: "https://www.vortigate.com/vortigate-3d-config" },
-          { id: 13, name: "Stadium 13", src: "assets/img/stadiums/Stadium01.jpg", tour: "https://www.vortigate.com/vortigate-3d-config" },
-          { id: 14, name: "Stadium 14", src: "assets/img/stadiums/Stadium01.jpg", tour: "https://www.vortigate.com/vortigate-3d-config" },
-          { id: 15, name: "Stadium 15", src: "assets/img/stadiums/Stadium01.jpg", tour: "https://www.vortigate.com/vortigate-3d-config" },
-      ];
+ document.addEventListener("DOMContentLoaded", function () {
+    let stadiums = [
+        { id: 1, name: "Stadium 1", src: "assets/img/stadiums/Stadium01.jpg", tour: "https://www.vortigate.com/vortigate-3d-config" },
+        { id: 2, name: "Stadium 2", src: "assets/img/stadiums/Stadium01.jpg", tour: "https://www.vortigate.com/vortigate-3d-config" },
+        { id: 3, name: "Stadium 3", src: "assets/img/stadiums/Stadium01.jpg", tour: "https://www.vortigate.com/vortigate-3d-config" },
+        { id: 4, name: "Stadium 4", src: "assets/img/stadiums/Stadium01.jpg", tour: "https://www.vortigate.com/vortigate-3d-config" },
+        { id: 5, name: "Stadium 5", src: "assets/img/stadiums/Stadium01.jpg", tour: "https://www.vortigate.com/vortigate-3d-config" },
+        { id: 6, name: "Stadium 6", src: "assets/img/stadiums/Stadium01.jpg", tour: "https://www.vortigate.com/vortigate-3d-config" },
+        { id: 7, name: "Stadium 7", src: "assets/img/stadiums/Stadium01.jpg", tour: "https://www.vortigate.com/vortigate-3d-config" },
+        { id: 8, name: "Stadium 8", src: "assets/img/stadiums/Stadium01.jpg", tour: "https://www.vortigate.com/vortigate-3d-config" },
+        { id: 9, name: "Stadium 9", src: "assets/img/stadiums/Stadium01.jpg", tour: "https://www.vortigate.com/vortigate-3d-config" },
+        { id: 10, name: "Stadium 10", src: "assets/img/stadiums/Stadium01.jpg", tour: "https://www.vortigate.com/vortigate-3d-config" },
+        { id: 11, name: "Stadium 11", src: "assets/img/stadiums/Stadium01.jpg", tour: "https://www.vortigate.com/vortigate-3d-config" },
+        { id: 12, name: "Stadium 12", src: "assets/img/stadiums/Stadium01.jpg", tour: "https://www.vortigate.com/vortigate-3d-config" },
+        { id: 13, name: "Stadium 13", src: "assets/img/stadiums/Stadium01.jpg", tour: "https://www.vortigate.com/vortigate-3d-config" },
+        { id: 14, name: "Stadium 14", src: "assets/img/stadiums/Stadium01.jpg", tour: "https://www.vortigate.com/vortigate-3d-config" },
+        { id: 15, name: "Stadium 15", src: "assets/img/stadiums/Stadium01.jpg", tour: "https://www.vortigate.com/vortigate-3d-config" },
+    ];
 
-      let swiperWrapper = document.querySelector(".swiper-wrapper");
-      stadiums.forEach(stadium => {
-          let slideDiv = document.createElement("div");
-          slideDiv.classList.add("swiper-slide");
-          slideDiv.innerHTML = `
-              <div class="card" onclick="openTour('${stadium.tour}')">
-                  <img src="${stadium.src}" alt="${stadium.name}">
-                  <div class="card-body">${stadium.name}</div>
-              </div>
-          `;
-          swiperWrapper.appendChild(slideDiv);
-      });
+    let swiperWrapper = document.querySelector(".swiper-wrapper");
 
-      new Swiper(".mySwiper", {
-          effect: "coverflow",
-          grabCursor: true,
-          centeredSlides: true,
-          slidesPerView: '2',
-          loop: true,  // Disabled loop
-          autoplay: false,  // Disabled autoplay
-          coverflowEffect: {
-              rotate: 50,  // No rotation
-              stretch: 0,
-              depth: 100,  // Depth effect
-              modifier: 1,
-              slideShadows: true
-          },
-          pagination: { el: ".swiper-pagination", clickable: true },
-          navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev",
-            breakpoints: {
-              360: { slidesPerView: 1 },
+    // Create exactly 15 slides
+    stadiums.forEach(stadium => {
+        let slideDiv = document.createElement("div");
+        slideDiv.classList.add("swiper-slide");
+        slideDiv.innerHTML = `
+            <div class="card" onclick="openTour('${stadium.tour}')">
+                <img src="${stadium.src}" alt="${stadium.name}">
+                <div class="card-body">${stadium.name}</div>
+            </div>
+        `;
+        swiperWrapper.appendChild(slideDiv);
+    });
+
+    // Initialize Swiper after adding slides
+    new Swiper(".mySwiper", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 2,
+        loop: false,  // No infinite scrolling
+        autoplay: false, // No automatic slide transition
+        coverflowEffect: {
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev"
+        },
+        breakpoints: {
+            360: { slidesPerView: 1 },
             768: { slidesPerView: 1 },
             992: { slidesPerView: 2 },
-            1200: { slidesPerView: 2 },
-          }, }
-      });
-  });
+            1200: { slidesPerView: 2 }
+        }
+    });
+});
 
-  function openTour(url) {
-      document.getElementById("tourFrame").src = url;
-      new bootstrap.Modal(document.getElementById("virtualTourModal")).show();
-  }
+// Function to open the virtual tour in a modal
+function openTour(url) {
+    document.getElementById("tourFrame").src = url;
+    new bootstrap.Modal(document.getElementById("virtualTourModal")).show();
+}
 </script>
 
 </body>
