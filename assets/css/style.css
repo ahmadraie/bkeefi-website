@@ -604,6 +604,11 @@ left: -10vw;
       font-weight: 700;
       text-align: center;
     }
+    #premiumModal .intro {
+      color: #ff0000;
+      font-weight: 700;
+      text-align: center;
+    }
 
 @media (max-width:768px) {
   #ticketModal .modal-content {
