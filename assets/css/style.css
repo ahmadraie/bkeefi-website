@@ -493,10 +493,19 @@ color: #ff0000;
   list-style-type: none;
 }
 
-#subscription-plans ul li {
-  margin: 0.5rem 0;
-  text-align: left;
+#ticketModal .list-unstyled {
+padding-left: 0;  
+font-size: 15px;
+  text-align: justify;
+  /* text-indent : 100px; */
 }
+
+#standardModal .list-unstyled {
+  padding-left: 0;  
+  font-size: 14px;
+    text-align: justify;
+    /* text-indent : 16px; */
+  }
 
  .modal-body .btn {
   font-weight: 600;
@@ -548,17 +557,12 @@ width: 200px;
 
 #subscription-plans  .icon{
   display: flex;
-height: 80px;
-width: 80px;
+height: 100px;
+width: 100px;
 
 
 }
-.card-body .bkeefitext {
-padding-left: 20px;
-padding-right: 20px;
-  width:125px;
-  height: auto;
-}
+
 .card-body .custom-img { 
   width: 300px;
   height: auto;
@@ -567,10 +571,51 @@ padding-right: 20px;
 
 #ticketModal .modal-content {
 position: absolute;
-top: 25vh;
+top: 15vh;
 left: -10vw;
   width: 1000px;
   height: auto;
+}
+
+#standardModal .modal-content {
+  position: absolute;
+  top: 15vh;
+  left: 0;
+    width: 600px;
+    height: auto;
+  }
+
+  #premiumModal .modal-content {
+    position: absolute;
+    top: 15vh;
+    left: 0;
+      width: 600px;
+      height: auto;
+    }
+
+@media (max-width:768px) {
+  #ticketModal .modal-content {
+    position: relative;
+    top: 5vh;
+left: 0;
+      width: auto;
+      height: auto;
+    }
+    #standardModal .modal-content {
+      position: relative;
+      top: 5vh;
+      left: 0;
+        width: auto;
+        height: auto;
+      }
+      #premiumModal .modal-content {
+        position: relative;
+        top: 5vh;
+        left: 0;
+          width: auto;
+          height: auto;
+        }
+
 }
 
 
