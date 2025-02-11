@@ -6,7 +6,6 @@
     <title>Bkeefi 3D Store</title>
     <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/aframe-joystick-controls@^1.0.0/joystick.js"></script>
 
 </head>
 <body>
@@ -20,20 +19,15 @@
         <h1>Explore the Virtual Store</h1>
     </div>
 
-    <a-scene>
+    <a-scene  vr-mode-ui="enabled: true">
         <!-- Camera & Controls -->
-        <!-- <a-entity position="0 1.6 4">
+        <a-entity position="0 1.6 4">
             <a-camera>
                 <a-cursor color="red"></a-cursor>
             </a-camera>
-        </a-entity> -->
-
-        <a-entity id="cameraRig" movement-controls>
-            <a-camera wasd-controls="acceleration: 10">
-                <a-cursor color="red"></a-cursor>
-            </a-camera>
-            <a-entity joystick-controls="mode: touch"></a-entity>
         </a-entity>
+
+       
 
         <!-- Store Floor & Walls -->
         <a-plane position="0 0 0" rotation="-90 0 0" width="15" height="15" color="#8d8d8d"></a-plane>
@@ -46,8 +40,8 @@
         <!-- Products (Clickable) -->
         <a-entity 
         gltf-model="assets/models/vr-headset.glb" 
-        position="-2 2.5 -3" 
-        scale="1 1 1" 
+        position="-2 2.3 -3" 
+        scale="0.002 0.002 0.002" 
         rotation="0 0 0"
         onclick="showProductModal('VR Headset', 'High-quality VR headset for immersive experiences.', 'vr-headset.jpg')">
     </a-entity>
@@ -60,10 +54,12 @@
     position="0 1 -3" 
     scale="1 1 1">
 </a-box>
+<!-- <a-scene embedded vr-mode-ui="enabled: true"></a-scene> -->
 
         <!-- Lights -->
         <a-light type="point" position="0 5 0" intensity="1.5"></a-light>
     </a-scene>
+
 
     <!-- Product Modal -->
     <div class="modal fade" id="productModal" tabindex="-1" aria-hidden="true">
@@ -98,7 +94,6 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/aframe-joystick-controls@^1.0.0/joystick.js"></script>
 
 </body>
 </html>
