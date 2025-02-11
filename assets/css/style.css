@@ -7,6 +7,8 @@
 
 }
 
+
+
 /* General Reset */
 body {
     margin-top: 70px;
@@ -754,3 +756,81 @@ footer .mobile-app {
   color: #000000;
 }
 
+/* Store Style */
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+/* Make sure the parent item is positioned relatively */
+/* .nav-item {
+position: relative;
+} */
+
+/* Initially hide the cart dropdown */
+.cart-dropdown {
+display: none;
+position: absolute;
+top: 100%; /* Adjust this if needed */
+left: 0;
+background-color: white;
+border: 1px solid #ddd;
+box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+width: 200px; /* Adjust the width */
+padding: 10px;
+}
+
+/* For smooth show/hide transition */
+.cart-dropdown.show {
+display: block;
+}
+
+/* Optional: Add smooth transition effect */
+.cart-dropdown {
+transition: opacity 0.3s ease, visibility 0.3s ease;
+opacity: 0;
+visibility: hidden;
+}
+
+.cart-dropdown.show {
+opacity: 1;
+visibility: visible;
+}
+/* Style for total price */
+#cart-total {
+font-weight: bold;
+margin-top: 10px;
+}
+.carousel-item {
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  padding: 50px 5%;
+}
+
+@media (max-width:768px) {
+  .carousel-item {
+      height: 300px;
+  }
+}
+.carousel-content {
+  max-width: 50%;
+}
+.carousel-content h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+.carousel-image {
+  max-width: 40%;
+  height: auto;
+}
+
+#store h1 {
+  color: #fff;
+}
