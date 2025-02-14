@@ -15,23 +15,23 @@
         <div class="container">
             <!-- Replace Text Logo with Image Logo -->
             <a class="navbar-brand" href="#">
-                <img src="assets/img/white logo.png" alt="bkeefi Logo" height="60">
+                <img src="assets/img/bkeefi-stor-logo-white.png" alt="bkeefi Logo" height="60">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#vision-sa">Vision 2030</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#subscription-plans">Subscriptions</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#features">Product</a></li>
+                    <!-- <li class="nav-item"><a class="nav-link" href="#vision-sa">Vision 2030</a></li> -->
+                    <!-- <li class="nav-item"><a class="nav-link" href="#subscription-plans">Subscriptions</a></li> -->
                     <li class="nav-item position-relative">
                         <a class="nav-link" href="#" id="cartToggle">🛒 Cart (<span id="cart-count">0</span>)</a>
                         <div id="cartDropdown" class="cart-dropdown">
                             <ul id="cart-items" class="list-unstyled"></ul>
                             <div id="cart-total" class="mt-2"></div>
-                            <button class="btn btn-primary w-100 mt-2" onclick="checkout()">Checkout</button>
+                            <button class="btn  w-100 mt-2" onclick="checkout()">Checkout</button>
                         </div>
                     </li>
                     <!-- <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li> -->
@@ -88,15 +88,16 @@
     </div>
 
     <div class="container mt-5" id="store">
-        <h1 class="text-center mb-4">Bkeefi Store</h1>
+        <h1 class="text-center mb-4">bkeefi Store</h1>
         
         <div class="row mb-4">
             <div class="col-md-6">
                 <select id="categoryFilter" class="form-select" onchange="filterProducts()">
                     <option value="all">All Categories</option>
                     <option value="vr">VR Headsets</option>
+                    <option value="apparels">Sports apparels</option>
                     <option value="accessories">Accessories</option>
-                    <option value="furniture">Gaming Furniture</option>
+                    <option value="furniture">Furniture</option>
                 </select>
             </div>
             <div class="col-md-6">
@@ -138,9 +139,25 @@
 
     <script>
         const products = [
-            { id: 1, name: "VR Headset", category: "vr", price: 199, img: "https://via.placeholder.com/150" },
-            { id: 2, name: "Motion Controller", category: "accessories", price: 99, img: "https://via.placeholder.com/150" },
-            { id: 3, name: "Gaming Chair", category: "furniture", price: 249, img: "https://via.placeholder.com/150" }
+            { id: 1, name: "Hoodie Sweatshirt-black", category: "apparels", price: 199, img: "assets/img/product/hoodieSweatshirt-black-01.png" },
+            { id: 2, name: "Sports fitness bag Black-large", category: "accessories", price: 99, img: "assets/img/product/Sports-fitness-bag-large-capacity-handbag.png" },
+            { id: 3, name: "Meta Quest 3", category: "vr", price: 249, img: "assets/img/product/MetaQuest3.png" },
+            { id: 4, name: "bkeefi Gaming Chair", category: "furniture", price: 249, img: "assets/img/product/Gaming-Chair.png" },
+            { id: 5, name: "Hoodie Sweatshirt-red", category: "apparels", price: 199, img: "assets/img/product/hoodieSweatshirt-red-01.png" },
+            { id: 6, name: "Hoodie Sweatshirt-white", category: "apparels", price: 199, img: "assets/img/product/hoodieSweatshirt-white-01.png" },
+            { id: 7, name: "Hoodie Sweatshirt-white", category: "apparels", price: 199, img: "assets/img/product/hoodieSweatshirt-white-02.png" },
+            { id: 8, name: "Sports fitness bag Red-large", category: "accessories", price: 199, img: "assets/img/product/Sports-fitness-bag-large-capacity-handbag-red.png" },
+            { id: 9, name: "V-neck-black-T-shirt", category: "apparels", price: 199, img: "assets/img/product/V-neck-black-T-shirt-01.png" },
+            { id: 10, name: "Polo shirt raglan - Black", category: "apparels", price: 199, img: "assets/img/product/polo shirt raglan-shortsleeve-jersey-vi-black.png" },
+            { id: 11, name: "Polo shirt raglan - Green", category: "apparels", price: 199, img: "assets/img/product/polo shirt raglan-shortsleeve-jersey-vi-green.png" },
+            { id: 12, name: "Polo shirt raglan - Red", category: "apparels", price: 199, img: "assets/img/product/polo shirt raglan-shortsleeve-jersey-vi-red.png" },
+            { id: 13, name: "bkeefi Pillow", category: "furniture", price: 249, img: "assets/img/product/Pillow.png" },
+            { id: 14, name: "Mountaineering bag backpack - black", category: "accessories", price: 199, img: "assets/img/product/Mountaineering-bag-backpack-black.png" },
+            { id: 15, name: "Mountaineering bag backpack - red", category: "accessories", price: 199, img: "assets/img/product/Mountaineering-bag-backpack-red.png" },
+            { id: 16, name: "Drawstring canvas bag - Red", category: "accessories", price: 199, img: "assets/img/product/Drawstring-canvas-bag.png" },
+            { id: 17, name: "Black and White handbag", category: "accessories", price: 199, img: "assets/img/product/Two-color-handbag-01.png" },
+            { id: 18, name: "Red and White handbag", category: "accessories", price: 199, img: "assets/img/product/Two-color-handbag-02.png" },
+            { id: 19, name: "Meta Quest 2", category: "vr", price: 249, img: "assets/img/product/metaQuest2.png" },
         ];
         
         function displayProducts(filteredProducts = products) {
@@ -152,8 +169,8 @@
                         <div class="card product-card p-3 text-center">
                             <img src="${product.img}" alt="${product.name}">
                             <h5>${product.name}</h5>
-                            <p>$${product.price}</p>
-                            <button class="btn btn-primary" onclick="addToCart(${product.id})">Add to Cart</button>
+                            <p>${product.price}SR</p>
+                            <button class="btn " onclick="addToCart(${product.id})">Add to Cart</button>
                         </div>
                     </div>`;
             });
@@ -188,12 +205,12 @@ function updateCart() {
     let total = 0;
 
     cart.forEach((item, index) => {
-        cartItems.innerHTML += `<li>${item.name} - $${item.price} <button class='btn btn-sm btn-danger' onclick='removeFromCart(${index})'>x</button></li>`;
+        cartItems.innerHTML += `<li>${item.name} - SR ${item.price} <button class='btn btn-sm btn-danger' onclick='removeFromCart(${index})'>x</button></li>`;
         total += item.price; // Add price to total
     });
 
     cartCount.textContent = cart.length;
-    cartTotal.textContent = `Total: $${total}`; // Display total price
+    cartTotal.textContent = `Total: SR ${total}`; // Display total price
 }
 
 function removeFromCart(index) {

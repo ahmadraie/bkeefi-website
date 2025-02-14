@@ -763,6 +763,20 @@ footer .mobile-app {
   height: auto;
   border-radius: 10px;
 }
+
+.product-card .btn {
+
+  color: #fff;
+  background-color: #ff0000;
+  border: #000000 solid 1px;
+}
+
+.product-card .btn:hover {
+
+  color: #ff0000;
+  background-color: #fff;
+  border: #000000 solid 1px;
+}
 /* Make sure the parent item is positioned relatively */
 /* .nav-item {
 position: relative;
@@ -779,6 +793,20 @@ border: 1px solid #ddd;
 box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 width: 200px; /* Adjust the width */
 padding: 10px;
+}
+
+.cart-dropdown .btn {
+
+  color: #fff;
+  background-color: #ff0000;
+  border: #000000 solid 1px;
+}
+
+.cart-dropdown .btn:hover {
+
+  color: #ff0000;
+  background-color: #fff;
+  border: #000000 solid 1px;
 }
 
 /* For smooth show/hide transition */
