@@ -482,12 +482,10 @@ left: -10vw;
 }
 .marketing-content-03 h2 {
   color: #fff;
+  font-size: 30px;
   
  }
- .marketing-section-03 img {
-     transform:skew(0deg, 8deg);
 
- }
 .marketing-content-03 {
  /* transform:skew(0deg, 8deg); */
  /* background: rgba(0, 0, 0, 0.6); Semi-transparent background for text */
@@ -502,7 +500,7 @@ left: -10vw;
      height: auto;
  }
  .marketing-content-03 h2 {
-  font-size: 50px;
+  font-size: 16px;
  }
 }
 
