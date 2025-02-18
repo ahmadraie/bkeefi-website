@@ -857,20 +857,33 @@ margin-top: 10px;
   align-items: center;
   justify-content: center;
   text-align: left;
-  padding: 50px 5%;
+  padding: 0px 2%;
 }
 
 @media (max-width:768px) {
   .carousel-item {
       height: 300px;
   }
+  .carousel-content h1 {
+    font-size: 1rem;
+    font-weight: 700;
+  }
+  .carousel-content p {
+    font-size: 0.3rem;
+    font-weight: 500;
+  }
 }
 .carousel-content {
   max-width: 50%;
 }
 .carousel-content h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: 700;
+}
+
+.carousel-content p {
+  font-size: 1.2rem;
+  font-weight: 500;
 }
 .carousel-image {
   max-width: 40%;
