@@ -875,6 +875,7 @@ margin-top: 10px;
 }
 .carousel-content {
   max-width: 50%;
+  transform:skew(0deg, -8deg);
 }
 .carousel-content h1 {
   font-size: 3rem;
