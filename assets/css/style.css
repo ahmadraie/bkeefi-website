@@ -874,6 +874,21 @@ margin-top: 10px;
     font-weight: 500;
   }
 }
+
+@media (max-width:430px) {
+  .carousel-item {
+      height: 300px;
+  }
+  .carousel-content h1 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-top: 20px;
+  }
+  .carousel-content p {
+    font-size: 0.3rem;
+    font-weight: 500;
+  }
+}
 .carousel-content {
   max-width: 50%;
   transform:skew(0deg, -8deg);
