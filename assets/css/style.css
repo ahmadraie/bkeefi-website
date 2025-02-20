@@ -473,7 +473,7 @@ left: -10vw;
  padding: 0 0 0 0;
  color: #000000;
  background-color: #fff;
- height: 500px;
+ /* height: 500px; */
 }
 
 .marketing-content-03 .btn {
@@ -502,12 +502,12 @@ left: -10vw;
 }
 .marketing-content-03 h2 {
   color: #fff;
-  font-size: 30px;
-  
+  font-size: 45px;
+  transform:skew(0deg, -6deg);
  }
 
 .marketing-content-03 {
- /* transform:skew(0deg, 8deg); */
+ 
  /* background: rgba(0, 0, 0, 0.6); Semi-transparent background for text */
  border-radius: 10px;
  padding: 20px;
@@ -849,7 +849,7 @@ font-weight: bold;
 margin-top: 10px;
 }
 .carousel-item {
-  height: 500px;
+  height: 600px;
   background-size: cover;
   background-position: center;
   color: white;
@@ -867,6 +867,7 @@ margin-top: 10px;
   .carousel-content h1 {
     font-size: 1rem;
     font-weight: 700;
+    margin-top: 20px;
   }
   .carousel-content p {
     font-size: 0.3rem;
@@ -878,7 +879,7 @@ margin-top: 10px;
   transform:skew(0deg, -8deg);
 }
 .carousel-content h1 {
-  font-size: 3rem;
+  font-size: 4rem;
   font-weight: 700;
 }
 
@@ -889,6 +890,7 @@ margin-top: 10px;
 .carousel-image {
   max-width: 40%;
   height: auto;
+  margin-top: 20px;
 }
 
 #store h1 {
