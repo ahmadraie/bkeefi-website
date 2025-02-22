@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,61 +10,62 @@
 
     <style>
         /* Loading screen styles */
-#loading-screen {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #000;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-    color: #fff;
-    font-family: Arial, sans-serif;
-}
+        #loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
 
-.loading-text {
-    font-size: 1.5em;
-    margin-bottom: 20px;
-}
+        .loading-text {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
 
-/* Loading bar */
-.loading-bar {
-    width: 80%;
-    max-width: 600px;
-    height: 20px;
-    background: #444;
-    border-radius: 10px;
-    overflow: hidden;
-    border: 2px solid #fff;
-}
+        /* Loading bar */
+        .loading-bar {
+            width: 80%;
+            max-width: 600px;
+            height: 20px;
+            background: #444;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 2px solid #fff;
+        }
 
-.loading-progress {
-    height: 100%;
-    width: 0;
-    background: #00ffcc;
-    transition: width 0.2s ease;
-}
+        .loading-progress {
+            height: 100%;
+            width: 0;
+            background: #00ffcc;
+            transition: width 0.2s ease;
+        }
 
-.loading-percentage {
-    margin-top: 10px;
-    font-size: 1.2em;
-}
+        .loading-percentage {
+            margin-top: 10px;
+            font-size: 1.2em;
+        }
     </style>
 </head>
+
 <body>
 
     <!-- Loading Screen -->
-<div id="loading-screen">
-    <div class="loading-text">Loading...</div>
-    <div class="loading-bar">
-        <div class="loading-progress" id="loading-progress"></div>
+    <div id="loading-screen">
+        <div class="loading-text">Loading...</div>
+        <div class="loading-bar">
+            <div class="loading-progress" id="loading-progress"></div>
+        </div>
+        <div class="loading-percentage" id="loading-percentage">0%</div>
     </div>
-    <div class="loading-percentage" id="loading-percentage">0%</div>
-</div>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
@@ -75,7 +77,7 @@
         <h1>Explore the Virtual Store</h1>
     </div>
 
-    <a-scene  id="scene" loading-screen="enabled: false">
+    <a-scene id="scene" loading-screen="enabled: false">
         <!-- Camera & Controls -->
         <a-entity position="2 0 4">
             <a-camera>
@@ -83,7 +85,7 @@
             </a-camera>
         </a-entity>
 
-       
+
 
         <!-- Store Floor & Walls -->
         <a-plane position="0 0 0" rotation="-90 0 0" width="15" height="15" color="#8d8d8d"></a-plane>
@@ -97,279 +99,145 @@
         <a-plane position="0 4.5 0" rotation="90 0 0" width="15" height="15" color="#8d8d8d"></a-plane>
 
 
-         <!-- cealing01 -->
-         <a-entity 
-         gltf-model="assets/models/SM_Ceiling_06.glb" 
-         position="0 4 -4" 
-         scale="1 1 2" 
-         rotation="0 0 0"
-       >
-     </a-entity>
+        <!-- cealing01 -->
+        <a-entity gltf-model="assets/models/SM_Ceiling_06.glb" position="0 4 -4" scale="1 1 2" rotation="0 0 0">
+        </a-entity>
 
-     <a-entity 
-     gltf-model="assets/models/SM_Lamp_04.glb" 
-     position="-1.3 3.8 -2" 
-     scale="1 1 1" 
-     rotation="0 0 0"
-   >
- </a-entity>
+        <a-entity gltf-model="assets/models/SM_Lamp_04.glb" position="-1.3 3.8 -2" scale="1 1 1" rotation="0 0 0">
+        </a-entity>
 
- <a-entity 
- gltf-model="assets/models/SM_Lamp_04.glb" 
- position="-1.3 3.8 2" 
- scale="1 1 1" 
- rotation="0 0 0"
->
-</a-entity>
+        <a-entity gltf-model="assets/models/SM_Lamp_04.glb" position="-1.3 3.8 2" scale="1 1 1" rotation="0 0 0">
+        </a-entity>
 
 
-  <!-- cealing02 -->
-  <a-entity 
-  gltf-model="assets/models/SM_Ceiling_06.glb" 
-  position="4 4 -4" 
-  scale="1 1 2" 
-  rotation="0 0 0"
->
-</a-entity>
+        <!-- cealing02 -->
+        <a-entity gltf-model="assets/models/SM_Ceiling_06.glb" position="4 4 -4" scale="1 1 2" rotation="0 0 0">
+        </a-entity>
 
-<a-entity 
-gltf-model="assets/models/SM_Lamp_04.glb" 
-position="2.5 3.8 -2" 
-scale="1 1 1" 
-rotation="0 0 0"
->
-</a-entity>
+        <a-entity gltf-model="assets/models/SM_Lamp_04.glb" position="2.5 3.8 -2" scale="1 1 1" rotation="0 0 0">
+        </a-entity>
 
-<a-entity 
-gltf-model="assets/models/SM_Lamp_04.glb" 
-position="2.5 3.8 2" 
-scale="1 1 1" 
-rotation="0 0 0"
->
-</a-entity>
-<!-- wall -->
- <!-- wall01 -->
-        <a-entity 
-        gltf-model="assets/models/SM_Inner_Wall_03.glb" 
-        position="1 0 -6.5" 
-        scale="1 1 1" 
-        rotation="0 -90 0"
-      >
-    </a-entity>
-<!-- wall02 -->
-    <a-entity 
-    gltf-model="assets/models/SM_Inner_Wall_03.glb" 
-    position="-5 0 -6.5" 
-    scale="1 1 1" 
-    rotation="0 -90 0"
-  >
-</a-entity>
+        <a-entity gltf-model="assets/models/SM_Lamp_04.glb" position="2.5 3.8 2" scale="1 1 1" rotation="0 0 0">
+        </a-entity>
+        <!-- wall -->
+        <!-- wall01 -->
+        <a-entity gltf-model="assets/models/SM_Inner_Wall_03.glb" position="1 0 -6.5" scale="1 1 1" rotation="0 -90 0">
+        </a-entity>
+        <!-- wall02 -->
+        <a-entity gltf-model="assets/models/SM_Inner_Wall_03.glb" position="-5 0 -6.5" scale="1 1 1" rotation="0 -90 0">
+        </a-entity>
 
-<!-- wall03 -->
-<a-entity 
-gltf-model="assets/models/SM_Inner_Wall_03.glb" 
-position="1 0 5" 
-scale="1 1 1" 
-rotation="0 -90 0"
->
-</a-entity>
-<!-- wall04 -->
-<a-entity 
-gltf-model="assets/models/SM_Inner_Wall_03.glb" 
-position="-5 0 5" 
-scale="1 1 1" 
-rotation="0 -90 0"
->
-</a-entity>
-<!-- wall05 -->
-<a-entity 
-gltf-model="assets/models/SM_Inner_Wall_03.glb" 
-position="7 0 -1" 
-scale="1 1 1" 
-rotation="0 0 0"
->
-</a-entity>
-<!-- wall06 -->
-<a-entity 
-gltf-model="assets/models/SM_Inner_Wall_03.glb" 
-position="7 0 5" 
-scale="1 1 1" 
-rotation="0 0 0"
->
-</a-entity>
+        <!-- wall03 -->
+        <a-entity gltf-model="assets/models/SM_Inner_Wall_03.glb" position="1 0 5" scale="1 1 1" rotation="0 -90 0">
+        </a-entity>
+        <!-- wall04 -->
+        <a-entity gltf-model="assets/models/SM_Inner_Wall_03.glb" position="-5 0 5" scale="1 1 1" rotation="0 -90 0">
+        </a-entity>
+        <!-- wall05 -->
+        <a-entity gltf-model="assets/models/SM_Inner_Wall_03.glb" position="7 0 -1" scale="1 1 1" rotation="0 0 0">
+        </a-entity>
+        <!-- wall06 -->
+        <a-entity gltf-model="assets/models/SM_Inner_Wall_03.glb" position="7 0 5" scale="1 1 1" rotation="0 0 0">
+        </a-entity>
 
-<!-- logo wall -->
-<a-entity 
-gltf-model="assets/models/SM_Inner_Wall_04.glb" 
-position="-4.9 0 1.5" 
-scale="0.5 1 0.5" 
-rotation="0 0 0"
->
-</a-entity>
-<!-- wall07 -->
-<a-entity 
-gltf-model="assets/models/SM_Inner_Wall_03.glb" 
-position="-5 0 -1" 
-scale="1 1 1" 
-rotation="0 0 0"
->
-</a-entity>
-<!-- wall08 -->
-<a-entity 
-gltf-model="assets/models/SM_Inner_Wall_03.glb" 
-position="-5 0 5" 
-scale="1 1 1" 
-rotation="0 0 0"
->
-</a-entity>
+        <!-- logo wall -->
+        <a-entity gltf-model="assets/models/SM_Inner_Wall_04.glb" position="-4.9 0 1.5" scale="0.5 1 0.5"
+            rotation="0 0 0">
+        </a-entity>
+        <!-- wall07 -->
+        <a-entity gltf-model="assets/models/SM_Inner_Wall_03.glb" position="-5 0 -1" scale="1 1 1" rotation="0 0 0">
+        </a-entity>
+        <!-- wall08 -->
+        <a-entity gltf-model="assets/models/SM_Inner_Wall_03.glb" position="-5 0 5" scale="1 1 1" rotation="0 0 0">
+        </a-entity>
 
-<!-- external wall -->
- 
-<a-entity 
-gltf-model="assets/models/SM_External_Column_04.glb" 
-position="6 0 -6" 
-scale="1 1 1" 
-rotation="0 0 0"
->
-</a-entity>
+        <!-- external wall -->
 
-<a-entity 
-gltf-model="assets/models/SM_External_Column_04.glb" 
-position="0.5 0 -6" 
-scale="1 1 1" 
-rotation="0 0 0"
->
-</a-entity>
+        <a-entity gltf-model="assets/models/SM_External_Column_04.glb" position="6 0 -6" scale="1 1 1" rotation="0 0 0">
+        </a-entity>
 
-<a-entity 
-gltf-model="assets/models/SM_External_Column_04.glb" 
-position="-5 0 -6" 
-scale="1 1 1" 
-rotation="0 0 0"
->
-</a-entity>
+        <a-entity gltf-model="assets/models/SM_External_Column_04.glb" position="0.5 0 -6" scale="1 1 1"
+            rotation="0 0 0">
+        </a-entity>
 
-<!-- Rack -->
- <!-- rack01 -->
-        <a-entity 
-        gltf-model="assets/models/SM_Rack_05.glb" 
-        position="2.08 0 -6.5" 
-        scale="1 1 1" 
-        rotation="0 0 0"
-      >
-    </a-entity>
-    <!-- rack02 -->
-    <a-entity 
-    gltf-model="assets/models/SM_Rack_04.glb" 
-    position="-3.5 0 -6.5" 
-    scale="1 1 1" 
-    rotation="0 0 0"
-  >
-</a-entity>
+        <a-entity gltf-model="assets/models/SM_External_Column_04.glb" position="-5 0 -6" scale="1 1 1"
+            rotation="0 0 0">
+        </a-entity>
 
-    <!-- table cash 01 -->
-    <a-entity 
-    gltf-model="assets/models/SM_Rack_02.glb" 
-    position="-3.5 0 0" 
-    scale="1 1 1" 
-    rotation="0 90 0"
-  >
-</a-entity>
+        <!-- Rack -->
+        <!-- rack01 -->
+        <a-entity gltf-model="assets/models/SM_Rack_05.glb" position="2.08 0 -6.5" scale="1 1 1" rotation="0 0 0">
+        </a-entity>
+        <!-- rack02 -->
+        <a-entity gltf-model="assets/models/SM_Rack_04.glb" position="-3.5 0 -6.5" scale="1 1 1" rotation="0 0 0">
+        </a-entity>
 
-    <!--  cash 01 -->
+         <!-- rack-s 01 -->
+         <a-entity gltf-model="assets/models/SM_Rack_07.glb" position="6.3 1 -5" scale="1 1 1" rotation="0 90 0">
+        </a-entity>
 
-<a-entity 
-gltf-model="assets/models/SM_Cash_Register_01.glb" 
-position="-3.3 1.1 0" 
-scale="1 1 1" 
-rotation="0 90 0"
->
-</a-entity>
+        <!-- table cash 01 -->
+        <a-entity gltf-model="assets/models/SM_Rack_02.glb" position="-3.5 0 0" scale="1 1 1" rotation="0 90 0">
+        </a-entity>
 
-<a-entity 
-gltf-model="assets/models/SM_Cash_Register_02.glb" 
-position="-3.3 1 0" 
-scale="1 1 1" 
-rotation="0 90 0"
->
-</a-entity>
+        <!--  cash 01 -->
 
-<a-entity 
-gltf-model="assets/models/SM_Cash_Register_03.glb" 
-position="-3.3 1 0.4" 
-scale="1 1 1" 
-rotation="0 90 0"
->
-</a-entity>
+        <a-entity gltf-model="assets/models/SM_Cash_Register_01.glb" position="-3.3 1.1 0" scale="1 1 1"
+            rotation="0 90 0">
+        </a-entity>
 
-<a-entity 
-gltf-model="assets/models/SM_Cash_Register_04.glb" 
-position="-3.3 1 0.3" 
-scale="1 1 1" 
-rotation="0 90 0"
->
-</a-entity>
+        <a-entity gltf-model="assets/models/SM_Cash_Register_02.glb" position="-3.3 1 0" scale="1 1 1"
+            rotation="0 90 0">
+        </a-entity>
+
+        <a-entity gltf-model="assets/models/SM_Cash_Register_03.glb" position="-3.3 1 0.4" scale="1 1 1"
+            rotation="0 90 0">
+        </a-entity>
+
+        <a-entity gltf-model="assets/models/SM_Cash_Register_04.glb" position="-3.3 1 0.3" scale="1 1 1"
+            rotation="0 90 0">
+        </a-entity>
 
         <!--VR  Products (Clickable) -->
-        <a-entity 
-        gltf-model="assets/models/vr-headset.glb" 
-        position="-2 2.3 -3" 
-        scale="0.002 0.002 0.002" 
-        rotation="0 0 0"
-        onclick="showProductModal('VR Headset', 'High-quality VR headset for immersive experiences.', 'vr-headset.jpg')">
-    </a-entity>
+        <a-entity gltf-model="assets/models/vr-headset.glb" position="6.4 1.1 -5" scale="0.0007 0.0007 0.0007"
+            rotation="0 -90 0"
+            onclick="showProductModal('VR Headset', 'High-quality VR headset for immersive experiences.', 'assets/img/product/MetaQuest3.png' , '2450')">
+        </a-entity>
 
-       <!-- Houdi Products (Clickable) -->
-       <a-entity 
-       gltf-model="assets/models/SM_Clothes_16.glb" 
-       position="-0.1 2 -5.75" 
-       scale="1 1 1" 
-       rotation="0 0 0"
-       onclick="showProductModal('Houdie', 'High-quality VR headset for immersive experiences.', 'vr-headset.jpg')">
-   </a-entity>
+        <!-- Houdi Products (Clickable) -->
+        <a-entity gltf-model="assets/models/SM_Clothes_16.glb" position="-0.1 2 -5.75" scale="1 1 1" rotation="0 0 0"
+            onclick="showProductModal('Houdie', 'High-quality VR headset for immersive experiences.', 'assets/img/product/hoodieSweatshirt-white-01.png','55')">
+        </a-entity>
 
-      <!-- Houdi Products (Clickable) -->
-      <a-entity 
-      gltf-model="assets/models/SM_Clothes_17.glb" 
-      position="-0.73 2 -5.9" 
-      scale="1 1 1" 
-      rotation="0 0 0"
-      onclick="showProductModal('Houdie', 'High-quality VR headset for immersive experiences.', 'vr-headset.jpg')">
-  </a-entity>
+        <!-- Houdi Products (Clickable) -->
+        <a-entity gltf-model="assets/models/SM_Clothes_17.glb" position="-0.73 2 -5.9" scale="1 1 1" rotation="0 0 0"
+            onclick="showProductModal('Houdie', 'High-quality VR headset for immersive experiences.', 'assets/img/product/hoodieSweatshirt-red-01.png','55')">
+        </a-entity>
 
-      <!-- T-shirt Products (Clickable) -->
-      <a-entity 
-      gltf-model="assets/models/SM_Clothes_05.glb" 
-      position="-1.3 2.2 -5.9" 
-      scale="1 1 1" 
-      rotation="0 0 0"
-      onclick="showProductModal('Houdie', 'High-quality VR headset for immersive experiences.', 'vr-headset.jpg')">
-  </a-entity>
-       <!-- mannequine Products (Clickable) -->
-       <a-entity 
-       gltf-model="assets/models/SM_Mannequin_01.glb" 
-       position="-4 0 -5.5" 
-       scale="1 1 1" 
-       rotation="0 10 0"
-       onclick="showProductModal('Houdie', 'High-quality VR headset for immersive experiences.', 'vr-headset.jpg')">
-   </a-entity>
+        <!-- T-shirt Products (Clickable) -->
+        <a-entity gltf-model="assets/models/SM_Clothes_05.glb" position="-1.3 2.2 -5.9" scale="1 1 1" rotation="0 0 0"
+            onclick="showProductModal('T-shirt', 'High-quality VR headset for immersive experiences.', 'assets/img/product/V-neck-red-T-shirt-01.png','40')">
+        </a-entity>
+        <!-- mannequine Products (Clickable) -->
+        <a-entity gltf-model="assets/models/SM_Mannequin_01.glb" position="-4 0 -5.5" scale="1 1 1" rotation="0 10 0"
+            onclick="showProductModal('Houdie', 'High-quality VR headset for immersive experiences.', 'assets/img/product/','40')">
+        </a-entity>
 
         <a-box position="2 2 -3" width="0.5" height="0.5" depth="0.5" color="red"
-               onclick="showProductModal('Sports Shoes', 'Lightweight and comfortable for athletes.', 'shoes.jpg')"></a-box>
+            onclick="showProductModal('Sports Shoes', 'Lightweight and comfortable for athletes.', 'shoes.jpg','40')"></a-box>
 
-               <!-- <a-box 
+
+        <!-- <a-box 
     src="assets/img/Hero-image.png"
     position="0 1 -3" 
     scale="1 1 1">
 </a-box> -->
-<!-- <a-scene embedded vr-mode-ui="enabled: true"></a-scene> -->
+        <!-- <a-scene embedded vr-mode-ui="enabled: true"></a-scene> -->
 
         <!-- Lights -->
-        <a-light type="ambient" position="0 5 0" intensity="1" ></a-light>
-        <a-entity light="type: point; intensity: 1.2; distance: 10; decay: 2"
-        position="-0.5 4 -5"></a-entity>
-        <a-entity light="type: point; intensity: 1.2; distance: 10; decay: 2"
-        position="2 4 -5"></a-entity>
+        <a-light type="ambient" position="0 5 0" intensity="1"></a-light>
+        <a-entity light="type: point; intensity: 1.2; distance: 10; decay: 2" position="-0.5 4 -5"></a-entity>
+        <a-entity light="type: point; intensity: 1.2; distance: 10; decay: 2" position="2 4 -5"></a-entity>
     </a-scene>
 
 
@@ -384,6 +252,7 @@ rotation="0 90 0"
                 <div class="modal-body">
                     <img id="modalImage" src="" class="img-fluid" alt="Product Image">
                     <p id="modalDescription"></p>
+                    <h3 id="modalPrice"></h3>
                 </div>
                 <div class="modal-footer">
                     <button class="btn btn-primary">Add to Cart</button>
@@ -391,54 +260,55 @@ rotation="0 90 0"
             </div>
         </div>
     </div>
-    
+
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-    const scene = document.querySelector('#scene');
-    const loadingScreen = document.getElementById('loading-screen');
-    const loadingProgress = document.getElementById('loading-progress');
-    const loadingPercentage = document.getElementById('loading-percentage');
+            const scene = document.querySelector('#scene');
+            const loadingScreen = document.getElementById('loading-screen');
+            const loadingProgress = document.getElementById('loading-progress');
+            const loadingPercentage = document.getElementById('loading-percentage');
 
-    let loadedAssets = 0;
-    let totalAssets = document.querySelectorAll('a-asset-item').length;
+            let loadedAssets = 0;
+            let totalAssets = document.querySelectorAll('a-asset-item').length;
 
-    // If there are no assets, hide the loading screen
-    if (totalAssets === 0) {
-        loadingProgress.style.width = '100%';
-        loadingPercentage.textContent = '100%';
-        setTimeout(() => loadingScreen.style.display = 'none', 5000);
-        return;
-    }
-
-    // Listen for asset loaded events
-    document.querySelectorAll('a-asset-item').forEach(asset => {
-        asset.addEventListener('loaded', () => {
-            loadedAssets++;
-            const progress = Math.floor((loadedAssets / totalAssets) * 100);
-            loadingProgress.style.width = `${progress}%`;
-            loadingPercentage.textContent = `${progress}%`;
-
-            if (loadedAssets === totalAssets) {
-                setTimeout(() => {
-                    loadingScreen.style.display = 'none';
-                }, 5000);
+            // If there are no assets, hide the loading screen
+            if (totalAssets === 0) {
+                loadingProgress.style.width = '100%';
+                loadingPercentage.textContent = '100%';
+                setTimeout(() => loadingScreen.style.display = 'none', 500);
+                return;
             }
-        });
-    });
 
-    // Handle the case where scene finishes loading
-    scene.addEventListener('loaded', () => {
-        loadingProgress.style.width = '100%';
-        loadingPercentage.textContent = '100%';
-        setTimeout(() => loadingScreen.style.display = 'none', 500);
-    });
-});
+            // Listen for asset loaded events
+            document.querySelectorAll('a-asset-item').forEach(asset => {
+                asset.addEventListener('loaded', () => {
+                    loadedAssets++;
+                    const progress = Math.floor((loadedAssets / totalAssets) * 100);
+                    loadingProgress.style.width = `${progress}%`;
+                    loadingPercentage.textContent = `${progress}%`;
+
+                    if (loadedAssets === totalAssets) {
+                        setTimeout(() => {
+                            loadingScreen.style.display = 'none';
+                        }, 500);
+                    }
+                });
+            });
+
+            // Handle the case where scene finishes loading
+            scene.addEventListener('loaded', () => {
+                loadingProgress.style.width = '100%';
+                loadingPercentage.textContent = '100%';
+                setTimeout(() => loadingScreen.style.display = 'none', 500);
+            });
+        });
     </script>
     <script>
-        function showProductModal(title, description, image) {
+        function showProductModal(title, description, image, price) {
             document.getElementById('modalTitle').innerText = title;
             document.getElementById('modalDescription').innerText = description;
             document.getElementById('modalImage').src = image;
+            document.getElementById('modalPrice').innerText = 'price: '+ price +' SR';
             new bootstrap.Modal(document.getElementById('productModal')).show();
         }
     </script>
@@ -450,4 +320,5 @@ rotation="0 90 0"
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
+
 </html>
