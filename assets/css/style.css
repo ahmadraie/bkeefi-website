@@ -476,7 +476,7 @@ left: -10vw;
  /* height: 500px; */
 }
 
-.marketing-content-03 .btn {
+.marketing-content-03 .btn  {
 
   font-size: 32px;
   font-weight: 700;
@@ -484,6 +484,7 @@ left: -10vw;
   background-color: #fff;
   border: #000000 solid 2px;
   border-radius: 8px;
+  margin-top: 20px;
 
 }
 .marketing-content-03 .btn:hover {
