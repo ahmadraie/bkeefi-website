@@ -504,7 +504,7 @@ left: -10vw;
 .marketing-content-03 h2 {
   color: #fff;
   font-size: 45px;
-  transform:skew(0deg, -6deg);
+  transform:skew(0deg, 0deg);
  }
 
 .marketing-content-03 {
